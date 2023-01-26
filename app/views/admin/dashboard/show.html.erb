@@ -1,2 +1,9 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<h1>Admin Dashboard</h1>
+<br>
+
+<div class="d-inline p-2 bg-primary text-white">Total products</div>
+<div class="d-inline p-2 bg-dark text-white"><%= link_to @total_products, products_path %></div>
+<br>
+<br>
+<div class="d-inline p-2 bg-primary text-white">Total Categories</div>
+<div class="d-inline p-2 bg-dark text-white"><%= link_to @total_categories, admin_products_path %></div>
