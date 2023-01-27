@@ -32,9 +32,9 @@ Rails.application.routes.draw do
 
   resources :about,  only: [:index]
 
-  resources :users, only: [:index, :create, :new]
+  resources :users, only: [ :create, :new]
 
-  resources :sessions, only: [:index, :create, :destroy, :new]
+  resources :sessions, only: [ :create, :destroy, :new]
 
 
   resource :cart, only: [:show] do
