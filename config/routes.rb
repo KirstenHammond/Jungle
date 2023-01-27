@@ -1,6 +1,22 @@
 Rails.application.routes.draw do
 
-#auto created during generator
+  #get '/signup' => 'users#new'
+  #post '/users' => 'users#create'
+
+  #get '/login' => 'sessions#new'
+  #post '/login' => 'sessions#create'
+  #get '/logout' => 'sessions#destroy'
+  
+  
+  #get 'sessions/new'
+  #post 'sessions/create'
+  #get 'sessions/destroy'
+  
+  
+  #get 'users/new'
+  #post 'users/create'
+
+  #auto created during generator
  # namespace :admin do
    # get 'categories/index'
    # get 'categories/new'
@@ -15,6 +31,11 @@ Rails.application.routes.draw do
   resources :categories, only: [:show]
 
   resources :about,  only: [:index]
+
+  resources :users, only: [:index, :create, :new]
+
+  resources :sessions, only: [:index, :create, :destroy, :new]
+
 
   resource :cart, only: [:show] do
     post   :add_item
