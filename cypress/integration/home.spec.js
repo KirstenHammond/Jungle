@@ -1,4 +1,4 @@
-describe('Jungle web app', () => {
+describe('Jungle home page', () => {
 
   // beforeEach(() => {
   //   cy.visit('http://0.0.0.0:3000/products')
