@@ -8,6 +8,19 @@
 
 <%= form_for :user, url: '/users' do |f| %>
 
+<%# if form.object.errors.any? %>
+<%#= raise form.object.errors.full_messages.inspect %>
+
+<div class="alert alert-danger">
+  <strong>The following errors prevented registering:</strong>
+  <ul>
+    <%# form.object.errors.full_messages.each do |error| %>
+      <li><%#= error%></li>
+    <%# end %>
+  </ul>
+</div>
+<%# end %>
+
   First Name: <%= f.text_field :first_name %>
   Last Name: <%= f.text_field :last_name %>
   Email: <%= f.text_field :email %>
