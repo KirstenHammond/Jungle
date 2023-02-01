@@ -4,6 +4,10 @@
     <h1>Admin &raquo; All Products</h1>
   </header>
 
+  <% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+ <% end %>
+ 
   <div class="well">
     <%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
   </div>

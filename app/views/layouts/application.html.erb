@@ -10,11 +10,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if current_user %>
-  Signed in as <%= current_user.email %> | <%= link_to "Logout", "/sessions/#{current_user.id}", method: :delete %>
-<% else %>
-  <%= link_to 'Login', '/sessions/new' %> | <%= link_to 'Signup', '/users/new' %>
-<% end %>
 
   <%= render 'layouts/top_nav' %>
 

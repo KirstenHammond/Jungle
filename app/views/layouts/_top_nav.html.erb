@@ -66,7 +66,14 @@
           <%= link_to cart_path, class: "nav-link ", id: "shopping-cart" do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>
         </li>
-      </ul>
+        <li class="nav-link"  >
+        <% if current_user %>
+        Signed in as <%= current_user.email %> | <%= link_to "Logout", "/sessions/#{current_user.id}", method: :delete %>
+      <% else %>
+        <%=  link_to 'Login', '/sessions/new', id: "login-logout" %> | <%= link_to 'Signup', '/users/new', id: "login-logout"  %>
+      <% end %>
+    </li>
+        </ul>
     </div>
   </div>
 </nav>

@@ -4,6 +4,10 @@
     <h1>Admin &raquo; All Categories</h1>
   </header>
 
+  <% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+ <% end %>
+
   <div class="well">
     <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
   </div>

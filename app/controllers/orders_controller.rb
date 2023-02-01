@@ -27,6 +27,8 @@ class OrdersController < ApplicationController
   end
 
   def perform_stripe_charge
+    
+    puts current_user
     Stripe::Charge.create(
       source:      params[:stripeToken],
       amount:      cart_subtotal_cents,
