@@ -46,7 +46,7 @@ cat1.products.create!({
   As a defense mechanism the Giant Tea grow slippery leaves to prevent insects from easily eaten them.
   They rely on animal pollination to reproduce. To promote pollination, they produce aromatic scents.",
   image: open_asset('plante_1.jpg'),
-  quantity: 0,
+  quantity: 55,
   price: 64.99
 })
 
@@ -168,7 +168,7 @@ cat2.products.create!({
   As a defense mechanism the Krapliper produces a thick, sticky wax.
   They rely on self pollination to reproduce. Once pollinated, they grow fairly large, inedible fruits.",
   image: open_asset('plante_9.jpg'),
-  quantity: 32,
+  quantity: 0,
   price: 1999.99
 })
 
@@ -183,7 +183,7 @@ cat3.products.create!({
   As a defense mechanism the Eesrorn has a thick, wooden stem.
   They rely on water currents to carry their seeds away to reproduce. Once pollinated, they grow fairly large, inedible fruits.",
   image: open_asset('plante_10.jpg'),
-  quantity: 0,
+  quantity: 56,
   price: 39.99
 })
 
@@ -198,7 +198,7 @@ cat3.products.create!({
   As a defense mechanism the Void Fennel has a thick, wooden stem.
   They rely on water currents to carry their seeds away to reproduce. Once pollinated, they grow fairly large, inedible fruits.",
   image: open_asset('plante_11.jpg'),
-  quantity: 0,
+  quantity: 88,
   price: 87.65
 })
 
@@ -213,7 +213,7 @@ cat3.products.create!({
   As a defense mechanism the Cliff Collard grows thick thorns.
   They rely on winds to carry their seeds away to reproduce. Once pollinated, they grow small, inedible fruits.",
   image: open_asset('plante_12.jpg'),
-  quantity: 0,
+  quantity: 4,
   price: 79.99
 })
 

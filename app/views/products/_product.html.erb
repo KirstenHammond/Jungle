@@ -8,7 +8,7 @@
   <% end%>
   
   <div>
-    <% if product.quantity == 0 %>
+    <% if isSoldOut?(product) %>
     <button class="soldout">Sold out</button>
     <button class="btn add-soldout"><%= fa_icon "shopping-cart", text: 'Add' %> </button>
     <% else %> 
