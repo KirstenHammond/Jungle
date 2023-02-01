@@ -1,25 +1,18 @@
 <h1>Signup!</h1>
 
-<% flash.each do |type, msg| %>
-  <div class="alert alert-info">
-    <%= msg %>
-  </div>
-<% end %>
 
-<%= form_for :user, url: '/users' do |f| %>
+<%= form_for @user, url: '/users' do |f| %>
 
-<%# if form.object.errors.any? %>
-<%#= raise form.object.errors.full_messages.inspect %>
-
-<div class="alert alert-danger">
-  <strong>The following errors prevented registering:</strong>
-  <ul>
-    <%# form.object.errors.full_messages.each do |error| %>
-      <li><%#= error%></li>
-    <%# end %>
-  </ul>
-</div>
-<%# end %>
+<% if f.object.errors.any? %>
+          <div class="alert alert-danger">
+            <strong>The following errors prevented saving:</strong>
+            <ul>
+              <% f.object.errors.full_messages.each do |error| %>
+                <li><%= error%></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
 
   First Name: <%= f.text_field :first_name %>
   Last Name: <%= f.text_field :last_name %>
